@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 
 include(":microsphere-devops-api")
 include(":microsphere-devops-repository")
+include(":microsphere-devops-service")

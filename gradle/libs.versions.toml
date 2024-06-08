@@ -39,9 +39,9 @@ curator = { module = "org.apache.curator:curator-recipes", version = "curatorVer
 jmh-core = { module = "org.openjdk.jmh:jmh-core", version.ref = "jmhVersion" }
 jmh-generator-annprocess = { module = "org.openjdk.jmh:jmh-generator-annprocess", version.ref = "jmhVersion" }
 microsphere-spring-cloud-dependencies = { module = "io.github.microsphere-projects:microsphere-spring-cloud-dependencies", version.ref = "microsphereSpringCloudVersion" }
+spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBootVersion" }
 spring-cloud-dependencies = { module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "springCloudVersion" }
 spring-cloud-alibaba-dependencies = { module = "com.alibaba.cloud:spring-cloud-alibaba-dependencies", version.ref = "springCloudAlibabaVersion" }
-spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBootVersion" }
 
 [bundles]
 apache-commons = ["commons-lang3", "commons-io"]
@@ -52,5 +52,5 @@ mybatis = ["mybatis", "mybatis-springboot"]
 jmh = ["jmh-core", "jmh-generator-annprocess"]
 
 [plugins]
-springbootGradlePlugin = { id = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "springBootVersion" }
-springGradleManagementPlugin = { id = "io.spring.gradle:dependency-management-plugin", version.ref = "managementPluginVersion" }
+springbootGradlePlugin = { id = "org.springframework.boot", version.ref = "springBootVersion" }
+springGradleManagementPlugin = { id = "io.spring.dependency-management", version.ref = "managementPluginVersion" }
