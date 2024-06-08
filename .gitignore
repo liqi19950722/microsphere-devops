@@ -29,6 +29,7 @@ target/
 # gradle ignore
 .gradle/
 !gradle/wrapper/*
+build/
 
 # eclipse ignore
 .settings/
