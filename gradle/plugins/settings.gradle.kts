@@ -1,4 +1,8 @@
-rootProject.name = "platform"
+pluginManagement {
+    includeBuild("../platform")
+}
+
+rootProject.name="plugins"
 
 dependencyResolutionManagement {
     versionCatalogs {

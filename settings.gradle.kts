@@ -21,4 +21,4 @@ dependencyResolutionManagement {
     }
 }
 
-//include(":microsphere-devops-api")
+include(":microsphere-devops-api")
