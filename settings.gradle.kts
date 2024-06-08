@@ -1,5 +1,6 @@
 pluginManagement {
     repositories.gradlePluginPortal()
+    includeBuild("gradle/plugins")
 }
 
 rootProject.name = "microsphere-devops"
@@ -19,4 +20,4 @@ dependencyResolutionManagement {
     }
 }
 
-include(":microsphere-devops-api")
+//include(":microsphere-devops-api")

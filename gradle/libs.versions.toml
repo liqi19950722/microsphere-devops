@@ -1,0 +1,57 @@
+[versions]
+microsphereSpringCloudVersion = "0.0.1-SNAPSHOT"
+springBootVersion = "2.7.15"
+managementPluginVersion = "1.1.4"
+springCloudVersion = "2021.0.8"
+springCloudAlibabaVersion = "2021.0.1.0"
+apolloClientVersion = "1.9.2"
+apolloOpenApiVersion = "1.7.0"
+alibabaDruidVersion = "1.2.16"
+commonsLang3Version = "3.13.0"
+commonsIOVersion = "2.13.0"
+fastjsonVersion = "2.0.39"
+findbugsVersion = "3.0.1"
+jsr305Version = "3.0.2"
+log4j2Version = "2.20.0"
+mybatisVersion = "3.5.11"
+mybatisSpringVersion = "1.3.1"
+mybatisSpringBootVersion = "3.0.1"
+annotationApiVersion = "1.3.2"
+curatorVersion = "4.0.1"
+jmhVersion = "1.36"
+
+[libraries]
+javaxAnnotation = { group = "javax.annotation", name = "javax.annotation-api", version.ref = "annotationApiVersion" }
+findbugs = { module = "com.google.code.findbugs:jsr305", version.ref = "jsr305Version" }
+commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "commonsLang3Version" }
+commons-io = { module = "commons-io:commons-io", version.ref = "commonsIOVersion" }
+log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4j2Version" }
+log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j2Version" }
+log4j-slf4j-impl = { module = "org.apache.logging.log4j:log4j-slf4j-impl", version.ref = "log4j2Version" }
+apollo-openapi = { module = "com.ctrip.framework.apollo:apollo-openapi", version.ref = "apolloOpenApiVersion" }
+apollo-client = { module = "com.ctrip.framework.apollo:apollo-client", version.ref = "apolloClientVersion" }
+druid = { module = "com.alibaba:druid", version.ref = "alibabaDruidVersion" }
+druid-spring-boot = { module = "com.alibaba:druid-spring-boot-starter", version.ref = "alibabaDruidVersion" }
+fastjson = { module = "com.alibaba:fastjson", version.ref = "fastjsonVersion" }
+mybatis = { module = "org.mybatis:mybatis", version.ref = "mybatisVersion" }
+mybatis-springboot = { module = "org.mybatis.spring.boot:mybatis-spring-boot-starter", version.ref = "mybatisSpringBootVersion" }
+curator = { module = "org.apache.curator:curator-recipes", version = "curatorVersion" }
+jmh-core = { module = "org.openjdk.jmh:jmh-core", version.ref = "jmhVersion" }
+jmh-generator-annprocess = { module = "org.openjdk.jmh:jmh-generator-annprocess", version.ref = "jmhVersion" }
+microsphere-spring-cloud-dependencies = { module = "io.github.microsphere-projects:microsphere-spring-cloud-dependencies", version.ref = "microsphereSpringCloudVersion" }
+spring-cloud-dependencies = { module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "springCloudVersion" }
+spring-cloud-alibaba-dependencies = { module = "com.alibaba.cloud:spring-cloud-alibaba-dependencies", version.ref = "springCloudAlibabaVersion" }
+spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBootVersion" }
+
+[bundles]
+dependencies = ["microsphere-spring-cloud-dependencies", "spring-cloud-alibaba-dependencies", "spring-cloud-dependencies", "spring-boot-dependencies"]
+apache-commons = ["commons-lang3", "commons-io"]
+log4j = ["log4j-api", "log4j-core", "log4j-slf4j-impl"]
+apollo = ["apollo-openapi", "apollo-client"]
+alibaba = ["druid", "druid-spring-boot", "fastjson"]
+myBatis = ["mybatis", "mybatis-springboot"]
+jmh = ["jmh-core", "jmh-generator-annprocess"]
+
+[plugins]
+springbootGradlePlugin = { id = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "springBootVersion" }
+springGradleManagementPlugin = { id = "io.spring.gradle:dependency-management-plugin", version.ref = "managementPluginVersion" }
