@@ -1,6 +1,7 @@
 pluginManagement {
     repositories.gradlePluginPortal()
     includeBuild("gradle/plugins")
+    includeBuild("gradle/platform")
 }
 
 rootProject.name = "microsphere-devops"
