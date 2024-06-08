@@ -44,12 +44,11 @@ spring-cloud-alibaba-dependencies = { module = "com.alibaba.cloud:spring-cloud-a
 spring-boot-dependencies = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springBootVersion" }
 
 [bundles]
-dependencies = ["microsphere-spring-cloud-dependencies", "spring-cloud-alibaba-dependencies", "spring-cloud-dependencies", "spring-boot-dependencies"]
 apache-commons = ["commons-lang3", "commons-io"]
-log4j = ["log4j-api", "log4j-core", "log4j-slf4j-impl"]
+log4j2 = ["log4j-api", "log4j-core", "log4j-slf4j-impl"]
 apollo = ["apollo-openapi", "apollo-client"]
 alibaba = ["druid", "druid-spring-boot", "fastjson"]
-myBatis = ["mybatis", "mybatis-springboot"]
+mybatis = ["mybatis", "mybatis-springboot"]
 jmh = ["jmh-core", "jmh-generator-annprocess"]
 
 [plugins]
